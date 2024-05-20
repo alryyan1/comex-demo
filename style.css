@@ -1,0 +1,189 @@
+/* .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 50vh;
+  gap: 1rem;
+} */
+
+@media (min-width: 300px) {
+  header{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.container {
+  --repeat: auto-fit;
+}
+@media (min-width: calc(250px * 3)) {
+  .container {
+    --repeat: 3;
+  }
+}
+
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(var(--repeat, auto-fit), minmax(calc(250px * 1) , 1fr));
+  grid-gap: 8px;
+}
+
+body {
+  max-width: 60%;
+  margin: auto;
+  background-color: #ecf0f1;
+  color: #34495e;
+}
+
+
+
+
+.card-container{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+
+.card-container .title {
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+  flex-direction: column;
+  min-height: 70px;
+  border: 1px solid #8acdde;
+  text-align: center;
+  text-transform: capitalize;
+  font-size: larger;
+  /* box-shadow: 3px 6px 4px lightseagreen; */
+  border-radius: 6px;
+  padding: 5px;
+}
+.title:first-of-type{
+  background-color: rgb(255, 255, 255);
+}
+
+img{
+  border-radius: 5px;
+  height: 200px;
+  width: 100%;
+}
+.title {
+  display: flex;
+  justify-content: space-between;
+  font-family: "cairo";
+  font-size: 1rem;
+  font-weight: bolder;
+
+}
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cairo-title {
+  font-family: "Cairo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+.footer button {
+
+  /*write material css button*/
+  /* style the button with click and hover effect */
+  background-color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 5px;
+  padding:5px 10px;
+  font-size: 1rem;
+  font-family: "cairo";
+  font-weight: bolder;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+}
+.btn {
+  position: relative;
+  width: 100%;
+  display: block;
+  padding: 0;
+
+  overflow: hidden;
+
+  border-width: 0;
+  outline: none;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+  
+  background-color: #2ecc71;
+  color: #ecf0f1;
+  
+  transition: background-color .3s;
+}
+
+.btn:hover, .btn:focus {
+  background-color: #27ae60;
+}
+
+.btn > * {
+  position: relative;
+}
+
+.btn span {
+  display: block;
+  padding: 12px 24px;
+}
+
+.btn:before {
+  content: "";
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  
+  display: block;
+  width: 0;
+  padding-top: 0;
+    
+  border-radius: 100%;
+  
+  background-color: rgba(236, 240, 241, .3);
+  
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.btn:active:before {
+  width: 120%;
+  padding-top: 120%;
+  
+  transition: width .2s ease-out, padding-top .2s ease-out;
+}
+
+/* Styles, not important */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+
+
+.btn.orange {
+  background-color: #e67e22;
+}
+
+.btn.orange:hover, .btn.orange:focus {
+  background-color: #d35400;
+}
+
+.btn.red {
+  background-color: #e74c3c;
+}
+
+.btn.red:hover, .btn.red:focus {
+  background-color: #c0392b;
+}
